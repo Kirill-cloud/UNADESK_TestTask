@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNADESK_TestTask", "UNADESK_TestTask\UNADESK_TestTask.csproj", "{BA4387F6-A515-436C-9C70-327D4E48BF6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnadeskGeometry", "UnadeskGeometry\UnadeskGeometry.csproj", "{E3AF07ED-EE8F-414A-A993-22E250F49F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnadeskGeometryTests", "UnadeskGeometryTests\UnadeskGeometryTests.csproj", "{FF1559D3-70AF-4C6F-84CD-DF3090D25462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA4387F6-A515-436C-9C70-327D4E48BF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA4387F6-A515-436C-9C70-327D4E48BF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA4387F6-A515-436C-9C70-327D4E48BF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA4387F6-A515-436C-9C70-327D4E48BF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AF07ED-EE8F-414A-A993-22E250F49F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AF07ED-EE8F-414A-A993-22E250F49F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AF07ED-EE8F-414A-A993-22E250F49F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AF07ED-EE8F-414A-A993-22E250F49F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1559D3-70AF-4C6F-84CD-DF3090D25462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1559D3-70AF-4C6F-84CD-DF3090D25462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1559D3-70AF-4C6F-84CD-DF3090D25462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1559D3-70AF-4C6F-84CD-DF3090D25462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

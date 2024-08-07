@@ -1,46 +1,42 @@
-﻿using UnadeskGeometry.Triangle.Extensions;
-
-namespace UnadeskGeometry.Triangle;
+﻿namespace UnadeskGeometry.Triangle;
 
 public class Triangle
 {
-    public double A { get; set; }
+    public double A { get; }
 
-    public double B { get; set; }
+    public double B { get; }
     
-    public double C { get; set; }
+    public double C { get; }
     
     public Triangle(double a, double b, double c)
     {
         A = a;
         B = b;
         C = c;
-        var sides = this.GetSortedSides();
-        if (a + b <= c)
+        
+        if (IsTriangleImpossible())
         {
             throw new ImpossibleTriangleException(a,b,c);
         }
     }
-    
-    private double[] GetSortedSides()
+
+    private bool IsTriangleImpossible()
     {
         var sides = new List<double>(3) { A,B,C };
         sides.Sort();
-        return sides.ToArray();
+        return sides[0] + sides[1] <= sides[2];
     }
     
-    public TriangleType GetType()
+    public TriangleType GetTriangleType()
     {
-        var sides = GetSortedSides();
+        var cosA = TriangleMath.GetCos(A,B,C);
+        var angleA = MeasurementConverter.GetDegrees(Math.Acos(cosA));
         
-        var cosA = TriangleExtensions.GetCos(sides[0], sides[1], sides[2]);
-        var angleA = GetDegrees(Math.Acos(cosA));
+        var cosB = TriangleMath.GetCos(A, C, B);
+        var angleB = MeasurementConverter.GetDegrees(Math.Acos(cosB));
         
-        var cosB = GetCos(sides[0], sides[2], sides[1]);
-        var angleB = GetDegrees(Math.Acos(cosB));
-        
-        var cosC = GetCos(sides[1], sides[2], sides[0]);
-        var angleC = GetDegrees(Math.Acos(cosC));
+        var cosC = TriangleMath.GetCos(C, B, A);
+        var angleC = MeasurementConverter.GetDegrees(Math.Acos(cosC));
 
         var angles = new List<double>(3) { angleA, angleB, angleC };
         angles.Sort();

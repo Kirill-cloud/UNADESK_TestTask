@@ -1,5 +1,4 @@
 using UnadeskGeometry.Triangle;
-using UnadeskGeometry.Triangle.Extensions;
 
 namespace UnadeskGeometryTests;
 
